@@ -1,4 +1,4 @@
-﻿# TCCD E-commerce API
+# TCCD E-commerce API
 
 A .NET 8 Web API project implementing an e-commerce system with clean architecture, featuring user authentication, product management, shopping cart functionality, and comprehensive logging.
 
