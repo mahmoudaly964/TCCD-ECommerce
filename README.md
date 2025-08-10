@@ -44,7 +44,6 @@ Add JWT configuration in `appsettings.json`:
 
 ### 5. Apply Database Migrations
 
-
 ### 6. Run the Application
 The API will be available at:
 - **HTTPS**: `https://localhost:7234`
@@ -90,6 +89,5 @@ The API will be available at:
 ## 🔐 Authentication
 
 The API uses **JWT Bearer Token** authentication. To access protected endpoints:
-
 1. Register a new user or login with existing credentials
 2. Use the returned JWT token in the Authorization header: Authorization: Bearer <your-jwt-token>
