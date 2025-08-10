@@ -89,11 +89,11 @@ namespace TCCD_Task.Controllers
         [HttpGet("cartItems/{cartId}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<APIResponse>> GetCartItemsAsync(Guid cartId)
+        public async Task<ActionResult<APIResponse>> GetCartItemsAsync(Guid cartId, int? pageNumber, int? pageSize)
         {
             try
             {
-                var items = await _cartService.GetCartItemsAsync(cartId);
+                var items = await _cartService.GetCartItemsAsync(cartId, pageNumber: pageNumber, pageSize: pageSize);
 
                 if (items == null || !items.Any())
                 {

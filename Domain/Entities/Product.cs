@@ -14,7 +14,6 @@ namespace Domain.Entities
         public Guid Id { get; set; } = Guid.NewGuid();
 
         [Required]
-        [StringLength(200)]
         [Range(0, (double)decimal.MaxValue, ErrorMessage = "Price must be non negative")]
         public decimal Price { get; set; }
         [Required]

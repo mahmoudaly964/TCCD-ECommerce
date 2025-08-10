@@ -12,6 +12,6 @@ namespace Application.Services_Interfaces
     {
         Task<CartResponse> CreateCartAsync(CreateCartRequest request);
         Task<bool> DeleteCartAsync(Guid cartId);
-        Task<List<CartItemResponse>> GetCartItemsAsync(Guid cartId);
+        Task<List<CartItemResponse>> GetCartItemsAsync(Guid cartId, int? pageNumber, int? pageSize);
     }
 }

@@ -70,14 +70,14 @@ namespace Application.Services
             return true;
         }
 
-        public async Task<List<CartItemResponse>> GetCartItemsAsync(Guid cartId)
+        public async Task<List<CartItemResponse>> GetCartItemsAsync(Guid cartId, int? pageNumber, int? pageSize)
         {
             if (cartId == Guid.Empty)
             {
                 throw new ArgumentException("Cart ID cannot be empty");
             }
 
-            var cartItems = await _cartItemRepository.GetAllAsync(item => item.CartId == cartId, tracking: false);
+            var cartItems = await _cartItemRepository.GetAllAsync(item => item.CartId == cartId, pageNumber: pageNumber, pageSize: pageSize, tracking: false);
             return _mapper.Map<List<CartItemResponse>>(cartItems);
         }
     }

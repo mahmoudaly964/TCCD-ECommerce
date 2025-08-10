@@ -12,8 +12,6 @@ namespace Application.DTO.Products
         [StringLength(100)]
         public string? Name { get; set; }
 
-        [StringLength(500)]
-
         [Range(0, double.MaxValue)]
         public decimal? Price { get; set; }
 

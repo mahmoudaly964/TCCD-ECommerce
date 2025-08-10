@@ -11,7 +11,11 @@ namespace Application.DTO.Products
     {
         [Required(ErrorMessage = "Name is required")]
         [StringLength(100)]
-        public string Name { get; set; } 
+        public string Name { get; set; }
+        
+        [Required(ErrorMessage = "Quantity is required")]
+        [Range(0, int.MaxValue, ErrorMessage = "Quantity must be greater than or equal to 0")]
+        public int Quantity { get; set; }
 
 
         [Range(0, (double)decimal.MaxValue)]
