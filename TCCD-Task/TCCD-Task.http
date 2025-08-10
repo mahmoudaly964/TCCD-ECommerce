@@ -1,0 +1,6 @@
+@TCCD_Task_HostAddress = http://localhost:5287
+
+GET {{TCCD_Task_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
