@@ -55,6 +55,7 @@ The API will be available at:
 ### Authentication
 - `POST /api/Auth/register` - Register new user
 - `POST /api/Auth/login` - User login
+- - `POST /api/Auth/logout` - User logout
 
 ### Users
 - `GET /api/User` - Get all users
